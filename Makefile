@@ -4,7 +4,10 @@ black:
 flake:
 	flake8 src tests
 
-lint: black flake
+isort:
+	isort src tests
+
+lint: black flake isort
 
 test:
 	pytest -n auto -vv
