@@ -1,9 +1,7 @@
 import numpy as np
 from sklearn.metrics import pairwise_distances
-from utils import validate_params
 
 
-@validate_params
 def connectivity(X, labels, neighbors=10, metric="euclidean"):
     distances = pairwise_distances(X, metric=metric)
     nearest = distances.argsort(axis=0)[1 : (neighbors + 1), :]

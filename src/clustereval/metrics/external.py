@@ -2,6 +2,9 @@ import itertools
 
 import numpy as np
 from scipy.optimize import linear_sum_assignment
+from sklearn.metrics import confusion_matrix
+
+from sklearn.utils.validation import validate_input
 
 
 def jaccard(labels_true, labels_pred):
